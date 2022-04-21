@@ -17,8 +17,17 @@
         </div>
         <div th:each="car: ${cars}">
             <div class="car">
-                <span th:text="${car.name}"></span>
-                <span th:text="${car.model}"></span>
+                <span th:text="${car.name}" class="fw-bolder"></span>
+                <span th:text="${car.model}" class="fw-bolder"></span>
+                <span th:if="${car.short_description}">
+                    <span th:text="${car.short_description}"></span>
+                </span>
+                <span th:text="${car.production_year}"></span>
+                <span th:text="${car.mileage}"></span>
+                <span th:text="${car.engine_capacity}"></span>
+                <span th:text="${car.fuel_type}"></span>
+                <span th:text="${car.localization}"></span>
+                <span th:text="${car.price}" class="text-danger fw-bold"></span>
             </div>
         </div>
     </div>

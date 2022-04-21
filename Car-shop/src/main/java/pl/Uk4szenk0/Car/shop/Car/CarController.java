@@ -33,8 +33,9 @@ public class CarController {
     }
 
     @GetMapping("/{name}")
-    public List<Car> findCarByName(@PathVariable String name){
-        return carrepo.findCarByName(name);
+    public String findByName(@PathVariable String name, Model model){
+        model.addAttribute("cars", carrepo.findByName(name));
+        return "Subpages/cars";
     }
 
     @GetMapping("/{name}/{model}")

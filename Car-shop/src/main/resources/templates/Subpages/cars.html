@@ -16,8 +16,10 @@
             <p>No cars aviable now</p>
         </div>
         <div th:each="car: ${cars}">
-            <span th:text="${car.name}"></span>
-            <span th:text="${car.model}"></span>
+            <div class="car">
+                <span th:text="${car.name}"></span>
+                <span th:text="${car.model}"></span>
+            </div>
         </div>
     </div>
 </body>

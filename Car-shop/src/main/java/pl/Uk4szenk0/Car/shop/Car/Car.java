@@ -24,5 +24,6 @@ public class Car {
     private String fuel_type;
     private String localization;
     private String car_type;
+    private float price;
 
 }

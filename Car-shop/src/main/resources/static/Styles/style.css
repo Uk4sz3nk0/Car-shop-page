@@ -1,0 +1,10 @@
+.centered{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.spacer{
+    margin: 200px auto 300px auto;
+}

@@ -23,9 +23,10 @@ public class CarController {
         return "Subpages/cars";
     }
 
-    @GetMapping("/carsbyid/{id}")
-    public Car findCarById(@PathVariable Long id){
-        return carrepo.findCarById(id);
+    @GetMapping("/carbyid/{id}")
+    public String findCarById(@PathVariable Long id, Model model){
+        model.addAttribute("cars", carrepo.findCarById(id));
+        return "Subpages/car";
     }
 
     @GetMapping("/{name}")

@@ -18,19 +18,19 @@
         <div class="card-group">
             <div th:each="car: ${cars}">
                 <!-- Card -->
-                <div class="card mx-auto" style="min-width: 300px; max-width: 440px; min-height: 400px;">
-                    <!--<img src="">-->
+                <div class="card mx-auto" style="min-width: 300px; max-width: 440px; min-height: 350px;">
+                    <!-- <img src="/resources/uploads/" class="card-img-top" th:src="@{car.image}"/> -->
                     <div class="card-body">
-                        <h4 th:text="${car.name} + ${car.model}" class="card-title"></h4>
+                        <h4 th:text="${car.name} + ' ' + ${car.model}" class="card-title"></h4>
                         <p th:if="${car.short_description}">
                             <span th:text="${car.short_description}" class="card-text"></span>
                         </p>
                         <p class="card-text"><small class="text-muted"><span th:text="${car.production_year}"></span></small></p>
-                        <p class="card-text"><small class="text-muted"><span th:text="${car.mileage}"></span></small></p>
-                        <p class="card-text"><small class="text-muted"><span th:text="${car.engine_capacity}"></span></small></p>
+                        <p class="card-text"><small class="text-muted"><span th:text="${car.mileage}"></span> km</small></p>
+                        <p class="card-text"><small class="text-muted"><span th:text="${car.engine_capacity}"></span> cm3</small></p>
                         <p class="card-text"><small class="text-muted"><span th:text="${car.fuel_type}"></span></small></p>
-                        <p class="card-text"><small class="text-muted"><span th:text="${car.localization}"></span></small></p>
-                        <p class="card-text"><small class="text-muted"><span th:text="${car.price}" class="text-danger fw-bold"></span></small></p>
+                        <p class="card-text"><small class="text-muted"><span th:text="${car.localization}" class="fw-bold"></span></small></p>
+                        <p class="card-text"><small class="text-muted fw-bold"><span th:text="${car.price}" class="text-danger"></span> <span class="text-danger"> PLN</span></small></p>
 
                     </div>
                 </div>

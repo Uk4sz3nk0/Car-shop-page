@@ -3,12 +3,15 @@ package pl.Uk4szenk0.Car.shop.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.view.RedirectView;
 
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 @Controller
 @RequestMapping("/cars")
@@ -38,4 +41,7 @@ public class CarController {
     public List<Car> findByNameAndModel(@PathVariable String name, @PathVariable String model){
         return carrepo.findByNameAndModel(name, model);
     }
+
+    // POST
+
 }

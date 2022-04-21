@@ -25,5 +25,6 @@ public class Car {
     private String localization;
     private String car_type;
     private float price;
+    private String image;
 
 }

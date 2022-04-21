@@ -26,9 +26,9 @@ public class CarController {
         return "Subpages/cars";
     }
 
-    @GetMapping("/carbyid/{id}")
+    @RequestMapping("/carid/{id}")
     public String findCarById(@PathVariable Long id, Model model){
-        model.addAttribute("cars", carrepo.findCarById(id));
+        model.addAttribute("car", carrepo.findCarById(id));
         return "Subpages/car";
     }
 

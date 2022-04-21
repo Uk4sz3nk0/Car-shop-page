@@ -9,8 +9,17 @@
     <title>Cars</title>
 </head>
 <body>
-    <div></div>
-    <div class="centered">
+    <div class="morespace">
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="http://localhost:8080/">Motomoto</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="morespace"></div>
+
+    <div class="centered morespace">
         <!-- Div with all cars-->
         <div th:if="${cars.empty}">
             <p>No cars aviable now</p>
@@ -31,6 +40,7 @@
                         <p class="card-text"><small class="text-muted"><span th:text="${car.fuel_type}"></span></small></p>
                         <p class="card-text"><small class="text-muted"><span th:text="${car.localization}" class="fw-bold"></span></small></p>
                         <p class="card-text"><small class="text-muted fw-bold"><span th:text="${car.price}" class="text-danger"></span> <span class="text-danger"> PLN</span></small></p>
+                        <a class="btn btn-primary" th:href="@{cars/carid/{id} (id=${car.id})}">Check out</a>
 
                     </div>
                 </div>

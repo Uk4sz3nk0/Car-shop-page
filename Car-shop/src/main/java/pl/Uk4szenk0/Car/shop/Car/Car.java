@@ -23,5 +23,6 @@ public class Car {
     private int engine_capacity;
     private String fuel_type;
     private String localization;
+    private String car_type;
 
 }
